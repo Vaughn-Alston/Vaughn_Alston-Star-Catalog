@@ -1,25 +1,36 @@
 html,
-body {
+/* beginning of css with homepage */
 
+/* I want to add a transparent box for my homepage */
+.welcome-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%; /* allow scaling */
   color: white;
-  background: white;
-  margin: 0;
-  padding: 0;
+  border-radius: 16px;
 }
+
 
 .home-body {
   margin: 0;
-  background: black;
-  color: white;
+  background-image: url(images/622.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color:white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+  padding-left:0 5%;
+  padding-right: 6%;
+  box-sizing: border-box;
 }
 
-.home-container {
-  text-align: center;
-}
+
+
+
 
 .start-button {
   display: inline-block;
@@ -31,6 +42,21 @@ body {
   color: black;
   text-decoration: none;
   font-weight: bold;
+}
+
+.start-button:hover{
+  transform: scale(1.03);  /* make the card hover /responsive */
+}
+
+
+/*This will be the end of my css for my home page */
+
+body {
+
+  color: white;
+  background: white;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
