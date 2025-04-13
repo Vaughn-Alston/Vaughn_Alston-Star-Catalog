@@ -7,14 +7,23 @@
     <script type="text/javascript" src="scripts.js"></script>
   </head>
   <body>
-    <header class = "main-header">
-    <h1 class="title">Date ideas for my Pookie </h1>
     <header class="main-header">
-
-    <div id="card-container"></div> <!-- I want the image containers to appear on top of the website to be unique and to put the search bar in middle-->
-    <header class="main-header">
-     
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shows</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar-container">
+        <input type="text" placeholder="Search TV Shows..." class="search-bar" />
+      </div>
     </header>
+
+    <h1 class="title">LA TV Shows</h1>
+    
+    <div id="card-container"></div>
+
     <div class="card" style="display: none">
       <div class="card-content">
         <h2>Nav Bar</h2>
@@ -26,6 +35,7 @@
         </ul>
       </div>
     </div>
+
     <div class="footer">
       <button onclick="quoteAlert();">Get A Quote!</button>
       <button onclick="removeLastCard();">Remove A Card!</button>

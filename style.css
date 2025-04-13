@@ -6,7 +6,40 @@ body {
   margin: 0;
   padding: 0;
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  padding: 1em;
+  z-index: 1000;
+}
 
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-bar-container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.search-bar {
+  padding: 0.5em;
+  width: 50%;
+  max-width: 400px;
+  font-size: 1em;
+}
 .main-header {
   background-color: rgba(0, 0, 0, 0.3);
   padding-bottom: 10px;
