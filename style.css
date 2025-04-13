@@ -18,18 +18,51 @@ body {
   color: white;
 }
 
+
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+}
+.item{
+  flex-grow:1;
+
+
+
+}
+
+
+/*
+My goal is to make the card icons responsive and appear on the top of the website page
+my goal is to keep the center of the website for the background a search
+I want to have some planets and starts on top of the catalog with a option that filters them 
+closest to fartherst from earth, younger ot olderst. 
+*/
+
+
+
 #card-container {
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center on each row */ 
+  align-items: flex-start; /* Align to the top */
+
+  /* size and postioning*/
+
+  width: 90%;
+  max-width: 800px;  /* making the card smaller*/
+  margin: 20px auto 0 auto; /* makign the card appear in the top margin only*/
+  padding: 10px;
 }
 
 .card {
   width: 300px;
+  max-width: 90vw; /* responsive width on smaller screens */
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 5px;
+  background-color: white;
 }
 
 .card-content {
