@@ -1,5 +1,16 @@
 html,
 /* beginning of css with homepage */
+/* === Global Reset === */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* I want to add a transparent box for my homepage */
 .welcome-box {
@@ -11,21 +22,18 @@ html,
   border-radius: 16px;
 }
 
-
 .home-body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
-  background-image: url(images/622.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color:white;
+  padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding-left:0 5%;
-  padding-right: 6%;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  background: url("images/622.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: black; /* fallback */
+  overflow: hidden;
 }
 
 
