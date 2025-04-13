@@ -1,7 +1,8 @@
 html,
 body {
-  color: black;
-  background: black;
+
+  color: white;
+  background: white;
   margin: 0;
   padding: 0;
 }
@@ -14,10 +15,10 @@ body {
 .title {
   text-align: center;
   margin: 0;
-  font-size: 8em;
-  font-family: "Helvetica";
+  font-size: 5ch;
+  font-family: "Bookman";
   font-weight: normal;
-  color: white;
+  color: black;
 }
 
 
@@ -54,7 +55,7 @@ closest to fartherst from earth, younger ot olderst.
   gap: 20px;
   width: 90%;
   max-width: 800px;  /* making the card smaller*/
-  margin: 20px auto 0 auto; /* makign the card appear in the top margin only*/
+  margin: 20px auto ; /* makign the card appear in the top margin only*/
   padding: 10px;
 }
 
