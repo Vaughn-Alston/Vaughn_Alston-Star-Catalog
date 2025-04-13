@@ -1,5 +1,7 @@
 html,
 body {
+  color: black;
+  background: black;
   margin: 0;
   padding: 0;
 }
@@ -47,8 +49,9 @@ closest to fartherst from earth, younger ot olderst.
   justify-content: center; /* Center on each row */ 
   align-items: flex-start; /* Align to the top */
 
-  /* size and postioning*/
 
+  /* size and postioning*/
+  gap: 20px;
   width: 90%;
   max-width: 800px;  /* making the card smaller*/
   margin: 20px auto 0 auto; /* makign the card appear in the top margin only*/
@@ -56,22 +59,28 @@ closest to fartherst from earth, younger ot olderst.
 }
 
 .card {
-  width: 300px;
-  max-width: 90vw; /* responsive width on smaller screens */
+  display: flex;
+  flex-direction: column; /*insures a vertical layout inside each card */
+  width: 220px;    /* smaller box size */ 
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
-  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.card:hover{
+  transform: scale(1.03);  /* make the card hover /responsive */
 }
 
 .card-content {
-  padding: 20px;
+  padding: 12px;
   font-family: "Verdana";
   color: #777;
 }
 
 .card-content h2 {
+
   margin-top: 0;
   font-size: 20px;
 }
