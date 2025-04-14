@@ -24,27 +24,27 @@
  */
 
 
-const shows = [
-  {
-    title: "Joshua Tree National Park , Ca",
-    image: "images/joshua_tree.jpg", // local image path
-    distance: 2.0,
-  },
-  {
-    title: "Griffith Observatory, Ca",
-    image: "images/griffith-stars.jpg",
-    distance: 483800000,
-
-  },
-  {
-    title: "Templin Hwy, Ca",
-    image: "images/Templin Hwy.jpg",
-    distance: 140000000,
-  },
-  
-];
 
 
+
+
+
+
+
+
+// main data array
+let shows = [];
+// add data using helper function
+function addShow(title, image, distance) {
+  shows.push({ title, image, distance });
+}
+
+//Star gazing spots will be put here
+addShow("Joshua Tree National Park", "images/joshua-tree.jfif", 2);
+addShow("Griffith Observatory", "images/griffith-stars.jpg", 2);
+addShow("Mount Wilson Observatory", "images/mount-wilson.jfif", 2);
+addShow("Garvey Ranch Park In Monterey Park", "images/star-party.jpg", 2);
+addShow("Death Valley National Park", "images/death-valley.jfif", 2);
 
 
 
@@ -78,6 +78,32 @@ function editCardContent(card, show) {
   ul.innerHTML = `<li>Distance: ${show.distance.toLocaleString()} miles</li>`;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // DOM Ready: load cards
 document.addEventListener("DOMContentLoaded", showCards);
 
@@ -91,3 +117,4 @@ function removeLastCard() {
   shows.pop();
   showCards();
 }
+
