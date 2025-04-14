@@ -5,12 +5,63 @@ html,
   box-sizing: border-box;
 }
 
+
+
+.main-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  padding: 1em;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
+
+
+
+
+
 
 /* I want to add a transparent box for my homepage */
 .welcome-box {
@@ -36,7 +87,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: url("images/space.jpg") no-repeat center center;
+  background: url("images/new-earth.jpg") no-repeat center center;
   background-size: cover;
   background-color: black; /* fallback */
   overflow: hidden;
@@ -81,26 +132,6 @@ body {
   padding: 0;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #333;
-  padding: 1em;
-  z-index: 1000;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  gap: 2em;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
 
 .search-bar-container {
   margin-top: 80px;
@@ -231,4 +262,18 @@ button {
   100% {
     text-shadow: 0 0 10px #f1fafa, 0 0 20px #f1f5f5;
   }
+
+  
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Apply to any element */
+.floating {
+  animation: float 4s ease-in-out infinite;
 }
