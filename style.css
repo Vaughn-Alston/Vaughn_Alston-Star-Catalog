@@ -21,6 +21,12 @@ html, body {
   color: white;
   border-radius: 16px;
 }
+.welcome-box h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0 0 10px #ebe5e3, 0 0 20px #36253d, 0 0 40px #dadede;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
 
 .home-body {
   width: 100vw;
@@ -30,12 +36,20 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: url("images/2150564686.jpg") no-repeat center center;
+  background: url("images/space.jpg") no-repeat center center;
   background-size: cover;
   background-color: black; /* fallback */
   overflow: hidden;
 }
 
+
+/* Start button hover glow */
+.start-button:hover {
+  background-color: #8b62a9;
+  color: black;
+  box-shadow: 0 0 20px #d1d4d4, 0 0 40px #e6ebeb;
+  transition: all 0.3s ease;
+}
 
 
 
@@ -204,4 +218,17 @@ button {
   font-size: 22px;
   cursor: pointer;
   margin: 5px;
+}
+
+/* Pulse animation */
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 10px #f9ffff, 0 0 20px #dce7e7;
+  }
+  50% {
+    text-shadow: 0 0 20px #d1dbdb, 0 0 40px #dbe6e6;
+  }
+  100% {
+    text-shadow: 0 0 10px #f1fafa, 0 0 20px #f1f5f5;
+  }
 }
