@@ -26,9 +26,9 @@
 
 const shows = [
   {
-    title: "The Moon",
-    image: "images/moon.jpg", // local image path
-    distance: 238900,
+    title: "Joshua Tree National Park",
+    image: "images/joshua_tree.jpg", // local image path
+    distance: 2.0,
   },
   {
     title: "Jupiter",
@@ -57,53 +57,38 @@ function showCards() {
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-  for (let i = 0; i < titles.length; i++) {
-    let title = titles[i];
-
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    let imageURL = "";
-    if (i == 0) {
-      imageURL = FRESH_PRINCE_URL;
-    } else if (i == 1) {
-      imageURL = CURB_POSTER_URL;
-    } else if (i == 2) {
-      imageURL = EAST_LOS_HIGH_POSTER_URL;
-    }
-
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL); // Edit title and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
-  }
+for(const shows of shows){
+const nextCard = templateCard.cloneNode(ture);
+editCardContent(nextCard, show);
+cardContainer.appendChil(nextCard);
 }
 
-function editCardContent(card, newTitle, newImageURL) {
+}
+
+
+// Customize card content
+function editCardContent(card, show) {
   card.style.display = "block";
 
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
+  card.querySelector("h2").textContent = show.title;
+  const img = card.querySelector("img");
+  img.src = show.image;
+  img.alt = `${show.title} Poster`;
 
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
-
-  // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
+  const ul = card.querySelector("ul");
+  ul.innerHTML = `<li>Distance: ${show.distance.toLocaleString()} miles</li>`;
 }
 
-// This calls the addCards() function when the page is first loaded
+// DOM Ready: load cards
 document.addEventListener("DOMContentLoaded", showCards);
 
+// Quote button
 function quoteAlert() {
-  console.log("Button Clicked!");
-  alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!"
-  );
+  alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
 }
 
+// Remove last card
 function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
+  shows.pop();
+  showCards();
 }

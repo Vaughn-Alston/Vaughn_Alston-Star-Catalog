@@ -194,10 +194,10 @@ closest to fartherst from earth, younger ot olderst.
   display: flex;
   flex-direction: column; /*insures a vertical layout inside each card */
   width: 220px;    /* smaller box size */ 
-  border: 1px solid #ccc;
+  border: 1px solid #151414;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #121111;
   transition: transform 0.2s ease;
 }
 
