@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title></title>
+    <title>LA TV Shows</title>
     <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="scripts.js" defer></script>
   </head>
   <body>
+    <!-- Navigation -->
     <header class="main-header">
       <nav class="navbar">
         <ul class="nav-links">
@@ -17,13 +17,12 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <div class="search-bar-container">
-        <input type="text" placeholder="" class="search-bar" />
-      </div>
     </header>
 
+    <!-- Title -->
     <h1 class="title">LA TV Shows</h1>
-    
+
+    <!-- Cards -->
     <div id="card-container"></div>
 
     <div class="card" style="display: none">
@@ -38,6 +37,7 @@
       </div>
     </div>
 
+    <!-- Footer Buttons -->
     <div class="footer">
       <button onclick="quoteAlert();">Get A Quote!</button>
       <button onclick="removeLastCard();">Remove A Card!</button>
