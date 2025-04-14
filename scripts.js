@@ -26,21 +26,22 @@
 
 const shows = [
   {
-    title: "Joshua Tree National Park",
+    title: "Joshua Tree National Park , Ca",
     image: "images/joshua_tree.jpg", // local image path
     distance: 2.0,
   },
   {
-    title: "Jupiter",
-    image: "images/Jupiter.jpg", 
+    title: "Griffith Observatory, Ca",
+    image: "images/griffith-stars.jpg",
     distance: 483800000,
 
   },
   {
-    title: "Mars",
-    image: "images/mars.png",
+    title: "Templin Hwy, Ca",
+    image: "images/Templin Hwy.jpg",
     distance: 140000000,
   },
+  
 ];
 
 
