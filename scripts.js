@@ -57,14 +57,12 @@ function showCards() {
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-for(const shows of shows){
-const nextCard = templateCard.cloneNode(ture);
-editCardContent(nextCard, show);
-cardContainer.appendChil(nextCard);
+  for (const show of shows) {
+    const nextCard = templateCard.cloneNode(true); // typo fixed
+    editCardContent(nextCard, show);               // variable corrected
+    cardContainer.appendChild(nextCard);           // typo fixed
+  }
 }
-
-}
-
 
 // Customize card content
 function editCardContent(card, show) {
