@@ -299,6 +299,8 @@ button {
 
 
 /* About me section */
+/* About me section */
+/* About me section */
 .about-section {
   display: flex;
   justify-content: center;
@@ -307,26 +309,39 @@ button {
   padding: 60px 20px;
 }
 
-.about-box {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  max-width: 700px;
-  padding: 40px;
+.about-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+  max-width: 1200px;
+  background-color: #111;
+  color: #f4f4f4;
+  padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-.about-box h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  animation: pulseGlow 2s infinite ease-in-out;
+.about-image-container {
+  border: 5px solid #ff7235; /* Frame the image */
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 2rem; /* Space between image and text */
 }
 
-.about-box p {
-  line-height: 1.6;
-  font-size: 1.1em;
-  margin-bottom: 15px;
+.about-image {
+  width: 250px; /* Set a fixed size for the image */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
+.about-content {
+  max-width: 700px;
+  text-align: left;
+}
 
+.about-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
