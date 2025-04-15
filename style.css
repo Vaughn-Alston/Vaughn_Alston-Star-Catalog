@@ -309,39 +309,42 @@ button {
   padding: 60px 20px;
 }
 
-.about-container {
+.about-section {
   display: flex;
-  align-items: center; /* Align items vertically */
   justify-content: center;
-  max-width: 1200px;
-  background-color: #111;
-  color: #f4f4f4;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 20px;
 }
 
-.about-image-container {
-  border: 5px solid #ff7235; /* Frame the image */
-  border-radius: 10px;
-  padding: 5px;
-  margin-right: 2rem; /* Space between image and text */
-}
-
-.about-image {
-  width: 250px; /* Set a fixed size for the image */
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.about-content {
+.about-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
   max-width: 700px;
-  text-align: left;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  text-align: center;
 }
 
-.about-content p {
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
-  font-size: 1.05rem;
+.about-box h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.about-box p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+.profile-pic {
+  width: 100%;
+  max-width: 400px; /* Set a nice max width */
+  height: auto;     /* Maintain aspect ratio */
+  border-radius: 12px; /* Soft rounded corners ( */
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  margin-bottom: 5px;
 }
