@@ -35,8 +35,8 @@
 // main data array
 let shows = [];
 // add data using helper function
-function addShow(title, image, distance) {
-  shows.push({ title, image, distance });
+function addShow(title, image, stars) {
+  shows.push({ title, image, stars });
 }
 
 //Star gazing spots will be put here
@@ -65,20 +65,22 @@ function showCards() {
   }
 }
 
-// Customize card content
+
 function editCardContent(card, show) {
   card.style.display = "block";
 
   card.querySelector("h2").textContent = show.title;
+
   const img = card.querySelector("img");
   img.src = show.image;
   img.alt = `${show.title} Poster`;
 
   const ul = card.querySelector("ul");
-  ul.innerHTML = `<li>Distance: ${show.distance.toLocaleString()} miles</li>`;
+  ul.innerHTML = `
+    <li><strong>Distance:</strong> ${show.distance} miles</li>
+    <li><strong>Star Visibility:</strong> ${"⭐".repeat(show.stars)}</li>
+  `;
 }
-
-
 
 
 
