@@ -103,9 +103,6 @@ function sortCatalog(criteria) {
 
 
 
-// DOM Ready: load cards
-document.addEventListener("DOMContentLoaded", showCards);
-
 // Quote button
 function quoteAlert() {
   alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
@@ -123,10 +120,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (input) {
     input.addEventListener("keyup", () => {
       const term = input.value.toLowerCase();
+
       const filtered = shows.filter(show =>
         show.title.toLowerCase().includes(term)
       );
+      if(filtered.length === 0)  // adding a messege incase search not found
+      {
+        cardContainer.innerHTML = `
+          <p style="text-align: center; color: white; font-size: 1.2em; margin-top: 20px;">
+            No results found for "<strong>${term}</strong>".
+          </p>
+        `;
+      } else {
+
+      
       showCards(filtered);
+      }
     });
   }
 
