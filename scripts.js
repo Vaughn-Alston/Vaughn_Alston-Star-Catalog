@@ -40,12 +40,13 @@ function addShow(title, image, stars) {
 }
 
 //Star gazing spots will be put here
-addShow("Joshua Tree National Park", "images/joshua-tree.jfif", 2);
-addShow("Griffith Observatory", "images/griffith-stars.jpg", 2);
-addShow("Mount Wilson Observatory", "images/mount-wilson.jfif", 2);
-addShow("Garvey Ranch Park In Monterey Park", "images/star-party.jpg", 2);
-addShow("Death Valley National Park", "images/death-valley.jfif", 2);
-
+addShow("Joshua Tree National Park", "images/joshua-tree.jfif", 5, );
+addShow("Griffith Observatory", "images/griffith-stars.jpg", 1, 1);
+addShow("Mount Wilson Observatory", "images/mount-wilson.jfif", 2, 2);
+addShow("Garvey Ranch Park In Monterey Park", "images/star-party.jpg", 1, 1);
+addShow("Death Valley National Park", "images/death-valley.jfif", 5, 5);
+addShow("Borrego Springs", "images/borrego-springs.jpg", 4, 4);
+addShow("Malibu Creek State Park", "images/malibu-creek.png", 3, 3);
 
 
 
@@ -77,7 +78,7 @@ function editCardContent(card, show) {
 
   const ul = card.querySelector("ul");
   ul.innerHTML = `
-    <li><strong>Distance:</strong> ${show.distance} miles</li>
+  
     <li><strong>Star Visibility:</strong> ${"⭐".repeat(show.stars)}</li>
   `;
 }

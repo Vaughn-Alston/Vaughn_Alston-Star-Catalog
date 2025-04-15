@@ -113,17 +113,13 @@ html, body {
 
 
 /*This will be the end of my css for my home page */
-
-
-
-body {
-
-  color: white;
-  background: white;
+.catalog-body {
+  background: url("images/shooting-star.gif") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding-top: 100px; /* pushes below navbar */
 }
-
 
 .search-bar-container {
   margin-top: 80px;
@@ -234,6 +230,14 @@ button {
   cursor: pointer;
   margin: 5px;
 }
+
+.glow-text {
+  animation: pulseGlow 2s infinite ease-in-out;
+  color: white;
+  text-shadow: 0 0 10px #f9ffff, 0 0 20px #dce7e7;
+}
+
+
 
 /* Pulse animation */
 @keyframes pulseGlow {
