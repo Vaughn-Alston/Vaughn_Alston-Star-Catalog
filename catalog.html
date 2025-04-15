@@ -35,6 +35,18 @@
     </div>
   </section>
 
+<!-- This will be my sort star rating button filter-->
+  <div class="filters">
+    <label for="sort-select">Sort by Star Visibility:</label>
+    <select id="sort-select" onchange="sortCatalog(this.value)">
+      <option value="">-- Select --</option>
+      <option value="stars-desc">Highest to Lowest ⭐</option>
+      <option value="stars-asc">Lowest to Highest ⭐</option>
+    </select>
+  </div>
+
+
+
     <!-- Cards -->
     <div id="card-container"></div>
 

@@ -83,6 +83,22 @@ function editCardContent(card, show) {
   `;
 }
 
+function sortCatalog(criteria) {
+  let sorted = [...shows];
+
+  if (criteria === "stars-desc") {
+    sorted.sort((a, b) => b.stars - a.stars);
+  } else if (criteria === "stars-asc") {
+    sorted.sort((a, b) => a.stars - b.stars);
+  }
+
+  showCards(sorted);
+}
+
+
+
+
+
 
 
 
