@@ -40,13 +40,13 @@ function addShow(title, image, stars) {
 }
 
 //Star gazing spots will be put here
-addShow("Joshua Tree National Park", "images/joshua-tree.jfif", 5, );
-addShow("Griffith Observatory", "images/griffith-stars.jpg", 1, 1);
-addShow("Mount Wilson Observatory", "images/mount-wilson.jfif", 2, 2);
-addShow("Garvey Ranch Park In Monterey Park", "images/star-party.jpg", 1, 1);
-addShow("Death Valley National Park", "images/death-valley.jfif", 5, 5);
-addShow("Borrego Springs", "images/borrego-springs.jpg", 4, 4);
-addShow("Malibu Creek State Park", "images/malibu-creek.png", 3, 3);
+addShow("Joshua Tree National Park", "images/joshua-tree.jfif", 5);
+addShow("Griffith Observatory", "images/griffith-stars.jpg", 1);
+addShow("Mount Wilson Observatory", "images/mount-wilson.jfif", 2);
+addShow("Garvey Ranch Park In Monterey Park", "images/star-party.jpg", 1);
+addShow("Death Valley National Park", "images/death-valley.jfif", 5);
+addShow("Borrego Springs", "images/borrego-springs.jpg", 4);
+addShow("Malibu Creek State Park", "images/malibu-creek.png", 3);
 
 
 
@@ -54,12 +54,12 @@ addShow("Malibu Creek State Park", "images/malibu-creek.png", 3, 3);
 // you should use more than just an array of strings to store it all.
 
 // This function adds cards the page to display the data in the array
-function showCards() {
+function showCards(filtered = shows) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-  for (const show of shows) {
+  for (const show of filtered) {
     const nextCard = templateCard.cloneNode(true); // typo fixed
     editCardContent(nextCard, show);               // variable corrected
     cardContainer.appendChild(nextCard);           // typo fixed
@@ -87,26 +87,6 @@ function editCardContent(card, show) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // DOM Ready: load cards
 document.addEventListener("DOMContentLoaded", showCards);
 
@@ -120,4 +100,23 @@ function removeLastCard() {
   shows.pop();
   showCards();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("search-input");
+
+  if (input) {
+    input.addEventListener("keyup", () => {
+      const term = input.value.toLowerCase();
+      const filtered = shows.filter(show =>
+        show.title.toLowerCase().includes(term)
+      );
+      showCards(filtered);
+    });
+  }
+
+  showCards(); // still display all cards on load
+});
+
+
+
 
