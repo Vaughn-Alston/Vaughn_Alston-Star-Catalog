@@ -230,10 +230,12 @@ closest to fartherst from earth, younger ot olderst.
   flex-grow: 1;
 }
 
-.card-content h2 {
-  margin-top: 0;
-  font-size: 20px;
+.card-content ul li em {
+  color: #ccc;
+  font-size: 0.95em;
+  line-height: 1.4;
 }
+
 .footer {
   display: flex;
   justify-content: center;
